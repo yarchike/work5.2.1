@@ -38,8 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     String lgps = FileUtil.readFile(getApplicationContext());
                     String[] lgpas = lgps.split(";");
-                    String logn = lgpas[0];
-                    String pasw = lgpas[1];
+                    String logn = "";
+                    String pasw = "";
+                    try{
+                        logn = lgpas[0];
+                        pasw = lgpas[1];
+                    }
+                    catch (java.lang.ArrayIndexOutOfBoundsException e){
+                        e.printStackTrace();
+                    }
                     if(logn.equals(lg) && pasw.equals(ps)){
                         Toast toast = Toast.makeText(this, getString(R.string.have_access), Toast.LENGTH_LONG);
                         toast.show();

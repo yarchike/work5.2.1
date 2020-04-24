@@ -11,6 +11,6 @@
     <string name="have_access">Вы успешно зашли</string>есть доступ
     <string name="no_access">Не верный логин или пароль</string>
     <string name="registration_successful">Регистрация прошла успешно</string>
-
+    <string name="no_reg">Нету зарегестрированых пользователей</string>
 
 </resources>
